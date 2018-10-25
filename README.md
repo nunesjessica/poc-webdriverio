@@ -1,26 +1,28 @@
 # POC Webdriver.IO + Cucumber
 
-
-## Configurando o ambiente
-
 ## Pré requisito
 
 * Node
 * Chrome
 
-### Instalar webdriver.io
+### Instalando as dependências do projeto
 ````
-npm install webdriverio
-````
-
-### Configurar o ambiente utilizando o wdio config
-````
-./node_modules/.bin/wdio config
+npm install
 ````
 
-### Criar o package.json 
+### Instalando Selenium Standalone
 ````
-npm init
+npm run selenium-install
+````
+
+### Levantando o Selenium
+````
+npm run selenium-start
+````
+
+### Rodando os testes
+````
+npm run tests
 ````
 
 ### Chrome Headless
