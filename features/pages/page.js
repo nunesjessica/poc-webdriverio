@@ -10,10 +10,6 @@ class Page {
     write_input(element, word) {
         $(element).setValue(word);
     }
-    get_title(){
-       return browser.getTitle();
-       
-    }
     click_buttons(button_id){
         $(button_id).click();
     }
