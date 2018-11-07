@@ -1,0 +1,5 @@
+/node_modules
+/errorShots
+.eslintrc.js
+settings.json
+package-lock.json
