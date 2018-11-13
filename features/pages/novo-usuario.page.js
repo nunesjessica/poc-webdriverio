@@ -1,25 +1,33 @@
-let Page = require('./page');
+"use strict"
+
+const Page = require('./page');
 
 
 class NovoUserPage extends Page {
     open() {
-        super.open('https://automacaocombatista.herokuapp.com/users/new');
+        super.open('https://automacaocombatista.herokuapp.com/users/new'); 
+    } 
+    get name() {
+        return browser.$('#user_name');
     }
-    write_name(name) {
-        super.write_input('#user_name', name);
+    get lastname() {
+        return browser.$('#user_lastname');
     }
-    write_lastname(lastname) {
-        super.write_input('#user_lastname', lastname);
+    get email() {
+        return browser.$('#user_email');
     }
-    write_email(email) {
-        super.write_input('#user_email', email);
+    get submitbutton() {
+        return '//*[@name="commit"]';
     }
-    create_button_click() {
-        super.click_buttons('//*[@name="commit"]');
+    write_required_fields(name, lastname, email){
+        this.name.setValue(name);
+        this.lastname.setValue(lastname);
+        this.email.setValue(email);
     }
-    user_message() {
-        return super.get_alert('#notice');
+    submit(){
+        browser.click(this.submitbutton);
     }
+    
 }
 
 module.exports = new NovoUserPage();

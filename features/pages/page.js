@@ -1,22 +1,19 @@
-'use strict';
-class Page {
-    constructor(){
 
-    }
-    open(path) {
-         browser.url(path);
+class Page {
+
+    open(url) {
+         browser.url(url);
+
+         return this;
          
     }
-    write_input(element, word) {
-        $(element).setValue(word);
+    get alert_message() {
+        return browser.$('#notice');
     }
-    click_buttons(button_id){
-        $(button_id).click();
+    alert_text(){
+        return this.alert_message.getText();
     }
 
-    get_alert(alert_id){
-        return $(alert_id).getText();
-    }
 }
 
 module.exports = Page;
