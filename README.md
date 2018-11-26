@@ -1,33 +1,33 @@
 # POC Webdriver.IO + Cucumber
 
-## Pré requisito
+## Prerequisites
 
 * Node
 * Chrome
 
-### Instalando as dependências do projeto
+### Install dependences
 ````
 npm install
 ````
 
-### Instalando Selenium Standalone
+### Install Selenium Standalone
 ````
 npm run selenium-install
 ````
 
-### Levantando o Selenium
+### Start Selenium
 ````
 npm run selenium-start
 ````
 
-### Rodando os testes
+### Run tests
 ````
 npm run tests
 ````
 
 ### Chrome Headless
 
-Para executar os testes utilizando o Chrome Headless é necessário adicionar a seguinte configuração ao arquivo [wdio.conf.js](https://github.com/nunesjessica/poc-webdriverio/blob/master/wdio.conf.js)
+To use the Chrome Headless you need to config the [wdio.conf.js](https://github.com/nunesjessica/poc-webdriverio/blob/master/wdio.conf.js) whith this code
 ````
 capabilities: [{
         maxInstances: 5,
